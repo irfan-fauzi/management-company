@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+} 
+html{
+  font-family: 'Be Vietnam', sans-serif;
+  font-size: 16px;
+  color: $DarkBlue;
+}
+body{
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 768px){
+  body{
+    overflow-x: hidden;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      background: url("https://raw.githubusercontent.com/irfan-fauzi/company-management-website/eef4cf9c10343fff0bcd26c8acc0bade2700e05d/images/bg-tablet-pattern.svg");
+      width: 50%;
+      height: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+      right: -3rem;
+      top: -3rem;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background: url("https://raw.githubusercontent.com/irfan-fauzi/company-management-website/eef4cf9c10343fff0bcd26c8acc0bade2700e05d/images/bg-tablet-pattern.svg");
+      width: 50%;
+      height: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+      left: -18rem;
+      bottom: 5rem;
+    }
+  }
+}
+
+main{
+  // border: black solid 1px;
+  max-width: 1400px;
+  margin:auto;
+}
+@media only screen and (min-width: 768px){
+  main{
+    padding: 0 5rem;
+  }
+}
+
+img{
+  display: inline-block;
+}
+p{
+  color: $DarkGrayishBlue;
+}
+// END BASE RESET

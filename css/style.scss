@@ -1,0 +1,41 @@
+
+// COLOR
+// #primary
+$BrightRed: hsl(12, 88%, 59%);
+$DarkBlue: hsl(228, 39%, 23%);
+
+// #neutral
+$DarkGrayishBlue: hsl(227, 12%, 61%);
+$VeryDarkBlue: hsl(233, 12%, 13%);
+$VeryPaleRed: hsl(13, 100%, 96%);
+$VaryLightGray: hsl(0, 0%, 98%);
+
+// END COLOr
+@mixin btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 20px;
+  color: $VaryLightGray;
+  background-color: $BrightRed;
+  transition: 1s;
+  box-shadow: 2px 19px 48px -10px $BrightRed;
+  font-weight: 700;
+  &:hover{
+   background-color: rgb(238, 1, 1);
+ }
+}
+
+// BASE RESET
+@import "_global";
+@import "_header";
+@import "_landing";
+@import "_features";
+@import "_testimonials";
+@import "_footers";
+ 
+ 
+
+
+
+

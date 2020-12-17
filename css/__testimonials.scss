@@ -1,0 +1,111 @@
+
+// TESTIMONIALS START
+.testimonials{
+  margin-top: 3rem;
+  text-align: center;
+  // height: 100vh;
+  h3{
+    font-size: 1.5rem;
+  }
+  .wrap-btn{
+    width: 300px;
+    margin: auto;
+    padding-right: 1rem;
+    // border: blue solid 1px;
+    .btn-slider{
+     color: white;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      
+      &::after{
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: -5px;
+        width: 10px;
+        height: 10px;
+        border: blue solid 1px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+    
+    }
+   
+  }
+  
+  .show{
+    background-color: $BrightRed;
+  }
+  
+  &__slider{
+    position: relative;
+    margin: auto;
+    display: flex;
+    // border: rgb(124, 122, 122) solid 1px;
+    width: 350px;
+    height: 300px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+   
+
+    .testimonials__slide{
+    //  border:rgb(238, 15, 15) solid 1px;
+      padding: 2rem; 
+     width: 350px;
+     flex-shrink: 0;
+     height: 100%;
+     cursor: pointer;
+
+     &::before{
+      content: "";
+      position: absolute;
+      width: 400%;
+      height: 80%;
+      background-color: #f8f7f7;
+      top: 20%;
+      z-index: -1;
+      left: 0;
+    }
+    
+     img{
+       width: 60px;
+     }
+     h4{
+       margin: 1rem 0;
+     }
+    }
+    
+  }
+  .btn{
+    @include btn();
+  }
+}
+@media only screen and (min-width: 992px){
+  .testimonials{
+    position: relative;
+    overflow-x: hidden;
+    z-index: 6;
+    &__slider{
+      
+      overflow-x: hidden;
+      width: 100%;
+      .testimonials__slide{
+        width: 400px;
+        &::before{
+          display: none;
+        }
+      }
+    }
+    .wrap-btn{
+      .slide2, .slide3{
+        display: none;
+      }
+    }
+  }
+}
+
+// TESTIMONIALS END
